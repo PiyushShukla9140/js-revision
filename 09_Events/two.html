@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async with Piyush</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    setTimeout(() => {
+        console.log("Piyush")
+    }, 2000);
+
+    // setInterval is similar to this setTimeout funciton
+    // we ask for some time interval berfore executing the funciton
+    setInterval(()=>{
+        console.log("Piyush")
+    },2000)
+
+    // set onterval means ke ek function ke baar baar perform ke beech me ita time gap hoga
+    // set timeout means ek bbar function perform itne time ke baad 
+    
+     const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })// In simple words clear timeout function is used to counter the setTimeout function
+
+    
+</script>
+</html>
