@@ -64,7 +64,9 @@ const promiseFive = new Promise(function(resolve, reject){
         }
     }, 1000)
 });
-
+// we cab also use promise with async await syntax
+// now promise ke catch lagana hi padta h lekin async await ke catch ka option nhi hota
+// toh hum try catch block use krte h
 async function consumePromiseFive(){
     try {
         const response = await promiseFive
@@ -97,6 +99,16 @@ fetch('https://api.github.com/users/hiteshchoudhary')
     console.log(data);
 })
 .catch((error) => console.log(error))
+
+//fetch is a network based call, it is an API which was previously not available with node.js
+// Fetch returns a promise and promise is either resolved or rejected 
+// .then is used if promise is resolved and .catch is udes if it is rejected
+// fetch ke liye evet loop ke andar special queue bnti h jiski priority highest hoti h
+
+
+
+
+
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
